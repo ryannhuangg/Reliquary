@@ -27,7 +27,9 @@ sourceSets.main.resources {
 }
 
 repositories {
-    // Add here additional repositories if required by some of the dependencies below.
+    maven {
+        url = "https://maven.theillusivec4.top/"
+    }
 }
 
 base {
@@ -116,6 +118,7 @@ configurations {
 }
 
 dependencies {
+    implementation "maven.modrinth:curios:9.5.1+1.21.1"
     // Example optional mod dependency with JEI
     // The JEI API is declared for compile time use, while the full JEI artifact is used at runtime
     // compileOnly "mezz.jei:jei-${mc_version}-common-api:${jei_version}"
@@ -170,12 +173,13 @@ publishing {
             from components.java
         }
     }
+}
     repositories {
         maven {
-            url "file://${project.projectDir}/repo"
+            name = "Modrinth"
+            url = "https://api.modrinth.com/maven"
         }
     }
-}
 
 tasks.withType(JavaCompile).configureEach {
     options.encoding = 'UTF-8' // Use the UTF-8 charset for Java compilation

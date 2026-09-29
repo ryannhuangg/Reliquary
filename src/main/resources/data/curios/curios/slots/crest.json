@@ -1,0 +1,8 @@
+
+{
+  "size": 1,
+  "icon": "reliquary:item/empty_crest_slot",
+  "entities": [
+    "minecraft:player"
+  ]
+}

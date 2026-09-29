@@ -1,0 +1,7 @@
+{
+  "size": 1,
+  "icon": "reliquary:item/empty_amulet_slot",
+  "entities": [
+    "minecraft:player"
+  ]
+}
