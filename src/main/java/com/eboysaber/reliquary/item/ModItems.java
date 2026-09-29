@@ -16,6 +16,12 @@ public class ModItems {
                 .rarity(Rarity.UNCOMMON)
             ));
 
+    public static final DeferredItem<Item> STORM_IN_A_BOTTLE = ITEMS.register("storm_in_a_bottle",
+            () -> new Item(new Item.Properties()
+                .stacksTo(1)
+                .rarity(Rarity.RARE)
+            ));
+
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }

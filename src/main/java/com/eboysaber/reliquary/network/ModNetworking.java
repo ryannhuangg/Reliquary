@@ -35,11 +35,20 @@ public final class ModNetworking {
             }
             player.fallDistance = 0;
             if (player.level() instanceof ServerLevel level) {
-                level.sendParticles(ParticleTypes.CLOUD,
-                        player.getX(), player.getY(), player.getZ(),
-                        8, 0.25, 0.05, 0.25, 0.02);
-                level.playSound(null, player.getX(), player.getY(), player.getZ(),
-                        SoundEvents.WOOL_FALL, SoundSource.PLAYERS, 0.8F, 1.4F);
+                if (payload.jumpIndex() == 1) {
+                    level.sendParticles(ParticleTypes.CLOUD,
+                            player.getX(), player.getY(), player.getZ(),
+                            8, 0.25, 0.05, 0.25, 0.02);
+                    level.playSound(null, player.getX(), player.getY(), player.getZ(),
+                            SoundEvents.WOOL_FALL, SoundSource.PLAYERS, 0.8F, 1.4F);
+                }
+                else if (payload.jumpIndex() >= 2) {
+                    level.sendParticles(ParticleTypes.SPLASH,
+                            player.getX(),player.getY(), player.getZ(),
+                            20, 0.3, 0.05, 0.3, 0.05);
+                    level.playSound(null, player.getX(), player.getY(), player.getZ(),
+                            SoundEvents.LIGHTNING_BOLT_THUNDER, SoundSource.PLAYERS, 0.8F, 1.4F);
+                }
             }
         });
     }

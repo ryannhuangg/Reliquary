@@ -34,6 +34,7 @@ public class ReliquaryMod {
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if(event.getTabKey() == CreativeModeTabs.COMBAT) {
             event.accept(ModItems.CLOUD_IN_A_BOTTLE);
+            event.accept(ModItems.STORM_IN_A_BOTTLE);
         }
     }
 

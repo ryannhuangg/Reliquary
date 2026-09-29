@@ -58,7 +58,7 @@ public final class ClientJumpHandler {
         player.setDeltaMovement(motion.x, player.getAttributeValue(Attributes.JUMP_STRENGTH) * 1.5, motion.z);
         player.fallDistance = 0;
         jumpsUsed++;
-        PacketDistributor.sendToServer(new ExtraJumpPayload());
+        PacketDistributor.sendToServer(new ExtraJumpPayload(jumpsUsed));
     }
 
     @SubscribeEvent
