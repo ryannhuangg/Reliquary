@@ -1,6 +1,6 @@
 package com.eboysaber.reliquary.network;
 
-import com.eboysaber.reliquary.util.BottleUtil;
+import com.eboysaber.reliquary.util.JumpAbility;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
@@ -30,7 +30,7 @@ public final class ModNetworking {
     private static void handleExtraJump(ExtraJumpPayload payload, IPayloadContext context) {
         context.enqueueWork(() -> {
             Player player = context.player();
-            if (BottleUtil.count(player) == 0) {
+            if (JumpAbility.count(player) == 0) {
                 return;
             }
             player.fallDistance = 0;

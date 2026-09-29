@@ -1,7 +1,7 @@
 package com.eboysaber.reliquary.client;
 
 import com.eboysaber.reliquary.network.ExtraJumpPayload;
-import com.eboysaber.reliquary.util.BottleUtil;
+import com.eboysaber.reliquary.util.JumpAbility;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.world.entity.ai.attributes.Attributes;
@@ -50,12 +50,12 @@ public final class ClientJumpHandler {
         if (player.getAbilities().flying || player.isFallFlying()) {
             return;
         }
-        if (jumpsUsed >= BottleUtil.count(player)) {
+        if (jumpsUsed >= JumpAbility.count(player)) {
             return;
         }
 
         Vec3 motion = player.getDeltaMovement();
-        player.setDeltaMovement(motion.x, player.getAttributeValue(Attributes.JUMP_STRENGTH), motion.z);
+        player.setDeltaMovement(motion.x, player.getAttributeValue(Attributes.JUMP_STRENGTH) * 1.5, motion.z);
         player.fallDistance = 0;
         jumpsUsed++;
         PacketDistributor.sendToServer(new ExtraJumpPayload());

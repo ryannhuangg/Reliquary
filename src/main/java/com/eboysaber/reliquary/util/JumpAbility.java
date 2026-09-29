@@ -6,9 +6,9 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import top.theillusivec4.curios.api.CuriosApi;
 
-public final class BottleUtil {
+public final class JumpAbility {
 
-    private BottleUtil() {
+    private JumpAbility() {
     }
 
     public static int count(Player player){
