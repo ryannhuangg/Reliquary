@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    " C ",
+    "CBC",
+    "   "
+  ],
+  "key": {
+    "C": {
+      "item": "reliquary:cloud_in_a_bottle"
+    },
+    "B": {
+      "item": "minecraft:glass_bottle"
+    }
+  },
+  "result": {
+    "id": "reliquary:storm_in_a_bottle",
+    "count": 1
+  }
+}
