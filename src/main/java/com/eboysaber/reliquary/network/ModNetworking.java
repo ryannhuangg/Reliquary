@@ -1,6 +1,8 @@
 package com.eboysaber.reliquary.network;
 
+import top.theillusivec4.curios.api.CuriosApi;
 import com.eboysaber.reliquary.util.JumpAbility;
+import com.eboysaber.reliquary.item.ModItems;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
@@ -34,15 +36,20 @@ public final class ModNetworking {
                 return;
             }
             player.fallDistance = 0;
+
+            boolean hasStormBottle = CuriosApi.getCuriosInventory(player)
+                .map(inv -> !inv.findCurios(ModItems.STORM_IN_A_BOTTLE.get()).isEmpty())
+                .orElse(false);
+
             if (player.level() instanceof ServerLevel level) {
-                if (payload.jumpIndex() == 1) {
+                if (payload.jumpIndex() == 1 || payload.jumpIndex() >= 2 && !hasStormBottle) { // cloud in bottle
                     level.sendParticles(ParticleTypes.CLOUD,
                             player.getX(), player.getY(), player.getZ(),
                             8, 0.25, 0.05, 0.25, 0.02);
                     level.playSound(null, player.getX(), player.getY(), player.getZ(),
                             SoundEvents.WOOL_FALL, SoundSource.PLAYERS, 0.8F, 1.4F);
                 }
-                else if (payload.jumpIndex() >= 2) {
+                else if (payload.jumpIndex() >= 2) { // storm in bottle
                     level.sendParticles(ParticleTypes.SPLASH,
                             player.getX(),player.getY(), player.getZ(),
                             20, 0.3, 0.05, 0.3, 0.05);
