@@ -3,6 +3,9 @@
     "minecraft:player"
   ],
   "slots": [
-    "relic"
+    "amulet",
+    "relic",
+    "emblem",
+    "crest"
   ]
 }

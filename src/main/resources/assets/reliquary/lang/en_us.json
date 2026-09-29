@@ -2,6 +2,6 @@
   "item.reliquary.cloud_in_a_bottle": "Cloud in a Bottle",
   "item.reliquary.storm_in_a_bottle": "Storm in a Bottle",
 
-  "tooltip.reliquary.cloud_in_a_bottle": "Allows the user to jump twice! Stacks with other Clouds in Bottles.",
-  "tooltip.reliquary.storm_in_a_bottle": "Allows the user to jump thrice! Not stackable."
+  "tooltip.reliquary.cloud_in_a_bottle": "Allows the user to double jump and negates ALL fall damage! Stacks with other Clouds in Bottles.",
+  "tooltip.reliquary.storm_in_a_bottle": "Cloud in a Bottle, but triple jump! Not stackable."
 }
