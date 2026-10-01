@@ -35,6 +35,8 @@ public class ReliquaryMod {
         if(event.getTabKey() == CreativeModeTabs.COMBAT) {
             event.accept(ModItems.CLOUD_IN_A_BOTTLE);
             event.accept(ModItems.STORM_IN_A_BOTTLE);
+            event.accept(ModItems.DUNERIDER_TALISMAN);
+            
         }
     }
 

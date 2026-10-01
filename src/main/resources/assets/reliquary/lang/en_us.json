@@ -1,7 +1,9 @@
 {
   "item.reliquary.cloud_in_a_bottle": "Cloud in a Bottle",
   "item.reliquary.storm_in_a_bottle": "Storm in a Bottle",
+  "item.reliquary.dunerider_talisman": "Dunerider's Talisman",
 
-  "tooltip.reliquary.cloud_in_a_bottle": "Allows the user to double jump and negates ALL fall damage! Stacks with other Clouds in Bottles.",
-  "tooltip.reliquary.storm_in_a_bottle": "Cloud in a Bottle, but triple jump! Not stackable."
+  "tooltip.reliquary.cloud_in_a_bottle": "Feel §b§oweightless§7§f! Negates fall damage and allows double jump. Stackable.",
+  "tooltip.reliquary.storm_in_a_bottle": "§lHarness§r the §e§lweather§r§f! Cloud in a Bottle, but triple jump! Not stackable.",
+  "tooltip.reliquary.dunerider_talisman": "§eDesert Stride§f! Increaes movement speed in desert terrain."
 }
