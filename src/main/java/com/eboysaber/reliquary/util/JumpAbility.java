@@ -15,14 +15,14 @@ public final class JumpAbility {
 
     public static int count(Player player) {
         return CuriosApi.getCuriosInventory(player).map(inventory -> {
-            if (!inventory.findCurios(ModItems.STORM_IN_A_BOTTLE.get()).isEmpty()) {
+            if (CuriosUtil.isEquipped(player, ModItems.STORM_IN_A_BOTTLE.get())) {
                 return 2;
             }
-            if (!inventory.findCurios(ModItems.CLOUD_IN_A_BOTTLE.get()).isEmpty()) {
+            else if (CuriosUtil.isEquipped(player, ModItems.CLOUD_IN_A_BOTTLE.get())) {
                 return inventory.findCurios(ModItems.CLOUD_IN_A_BOTTLE.get()).size();
             }
             return 0; 
-        }).orElse(0); 
+        }) .orElse(0); 
     }
 
     @SubscribeEvent

@@ -37,6 +37,7 @@ public class ReliquaryMod {
             event.accept(ModItems.STORM_IN_A_BOTTLE);
             event.accept(ModItems.DUNERIDER_TALISMAN);
             event.accept(ModItems.BERSERKER_VIAL);
+            event.accept(ModItems.BERSERKER_BREW);
         }
     }
 

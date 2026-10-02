@@ -9,7 +9,6 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.tick.PlayerTickEvent;
 
-import top.theillusivec4.curios.api.CuriosApi;
 @EventBusSubscriber(modid = ReliquaryMod.MODID)
 public final class BerserkerRage {
 
@@ -22,13 +21,17 @@ public final class BerserkerRage {
         if (player.level().isClientSide()) {
             return;
         }
-        boolean hasVial = CuriosApi.getCuriosInventory(player)
-            .map(inventory -> !inventory.findCurios(ModItems.BERSERKER_VIAL.get()).isEmpty())
-            .orElse(false);
 
-        if (hasVial && player.getHealth() < 8.0f) {
-            player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 20, 0, true, false, true));
-            
+        boolean hasVial = CuriosUtil.isEquipped(player, ModItems.BERSERKER_VIAL.get());
+        boolean hasBrew = CuriosUtil.isEquipped(player, ModItems.BERSERKER_BREW.get());
+
+        if (player.getHealth() < 8.0f) {
+            if (hasBrew) {
+                player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 20, 1, true, false, true));
+            }
+             else if (hasVial) {
+                player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 20, 0, true, false, true));
+            }
         }
     }
 }

@@ -10,17 +10,17 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(ReliquaryMod.MODID);
 
-    public static final DeferredItem<Item> CLOUD_IN_A_BOTTLE = ITEMS.register("cloud_in_a_bottle",
-            () -> new AccessoryItem(new Item.Properties().stacksTo(1).rarity(Rarity.UNCOMMON), "tooltip.reliquary.cloud_in_a_bottle"));
+    public static DeferredItem<Item> registerAccessory(String name, Rarity rarity) {
+        return ITEMS.register(name,
+                () -> new AccessoryItem(
+                        new Item.Properties().stacksTo(1).rarity(rarity), "tooltip." + ReliquaryMod.MODID + "." + name));
+    }
 
-    public static final DeferredItem<Item> STORM_IN_A_BOTTLE = ITEMS.register("storm_in_a_bottle",
-            () -> new AccessoryItem(new Item.Properties().stacksTo(1).rarity(Rarity.RARE), "tooltip.reliquary.storm_in_a_bottle"));
-
-    public static final DeferredItem<Item> DUNERIDER_TALISMAN = ITEMS.register("dunerider_talisman",             
-            () -> new AccessoryItem(new Item.Properties().stacksTo(1).rarity(Rarity.UNCOMMON), "tooltip.reliquary.dunerider_talisman"));
-
-    public static final DeferredItem<Item> BERSERKER_VIAL = ITEMS.register("berserker_vial", 
-            () -> new AccessoryItem(new Item.Properties().stacksTo(1).rarity(Rarity.UNCOMMON), "tooltip.reliquary.berserker_vial"));
+    public static final DeferredItem<Item> CLOUD_IN_A_BOTTLE = registerAccessory("cloud_in_a_bottle", Rarity.UNCOMMON);
+    public static final DeferredItem<Item> STORM_IN_A_BOTTLE = registerAccessory("storm_in_a_bottle", Rarity.RARE);
+    public static final DeferredItem<Item> DUNERIDER_TALISMAN = registerAccessory("dunerider_talisman", Rarity.UNCOMMON);
+    public static final DeferredItem<Item> BERSERKER_VIAL = registerAccessory("berserker_vial", Rarity.UNCOMMON);
+    public static final DeferredItem<Item> BERSERKER_BREW = registerAccessory("berserker_brew", Rarity.RARE);
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
