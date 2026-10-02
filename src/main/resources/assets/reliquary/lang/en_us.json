@@ -2,8 +2,10 @@
   "item.reliquary.cloud_in_a_bottle": "Cloud in a Bottle",
   "item.reliquary.storm_in_a_bottle": "Storm in a Bottle",
   "item.reliquary.dunerider_talisman": "Dunerider's Talisman",
+  "item.reliquary.berserker_vial": "Berserker's Vial",
 
   "tooltip.reliquary.cloud_in_a_bottle": "Feel §b§oweightless§7§f! Negates fall damage and allows double jump. Stackable.",
   "tooltip.reliquary.storm_in_a_bottle": "§lHarness§r the §e§lweather§r§f! Cloud in a Bottle, but triple jump! Not stackable.",
-  "tooltip.reliquary.dunerider_talisman": "§eDesert Stride§f! Increaes movement speed in desert terrain."
+  "tooltip.reliquary.dunerider_talisman": "§eDesert Stride§f! Increaes movement speed in desert terrain.",
+  "tooltip.reliquary.berserker_vial": "Adrenaline §c§oRush!§7§f! Increased strength when low."
 }
