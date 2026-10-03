@@ -22,6 +22,7 @@ public class ModCreativeModeTabs {
                     output.accept(ModItems.DUNERIDER_TALISMAN.get());
                     output.accept(ModItems.BERSERKER_VIAL.get());
                     output.accept(ModItems.BERSERKER_BREW.get());
+                    output.accept(ModItems.BERSERKER_CHALICE.get());
                 }).build());
 
     public static void register (IEventBus eventBus) {

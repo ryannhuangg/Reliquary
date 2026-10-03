@@ -21,6 +21,7 @@ public class ModItems {
     public static final DeferredItem<Item> DUNERIDER_TALISMAN = registerAccessory("dunerider_talisman", Rarity.UNCOMMON);
     public static final DeferredItem<Item> BERSERKER_VIAL = registerAccessory("berserker_vial", Rarity.UNCOMMON);
     public static final DeferredItem<Item> BERSERKER_BREW = registerAccessory("berserker_brew", Rarity.RARE);
+    public static final DeferredItem<Item> BERSERKER_CHALICE = registerAccessory("berserker_chalice", Rarity.EPIC);
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

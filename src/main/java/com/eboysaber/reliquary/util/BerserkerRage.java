@@ -2,6 +2,7 @@ package com.eboysaber.reliquary.util;
 
 import com.eboysaber.reliquary.ReliquaryMod;
 import com.eboysaber.reliquary.item.ModItems;
+
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.player.Player;
@@ -24,9 +25,14 @@ public final class BerserkerRage {
 
         boolean hasVial = CuriosUtil.isEquipped(player, ModItems.BERSERKER_VIAL.get());
         boolean hasBrew = CuriosUtil.isEquipped(player, ModItems.BERSERKER_BREW.get());
+        boolean hasChalice = CuriosUtil.isEquipped(player, ModItems.BERSERKER_CHALICE.get());
+
 
         if (player.getHealth() < 8.0f) {
-            if (hasBrew) {
+            if (player.getHealth() < 6.0f && hasChalice) {
+                player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 20, 2, true, false, true));
+            }
+            else if (hasBrew) {
                 player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 20, 1, true, false, true));
             }
              else if (hasVial) {
