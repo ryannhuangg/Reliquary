@@ -9,5 +9,7 @@
   "tooltip.reliquary.storm_in_a_bottle": "Harness the §e§lweather!§r§f Cloud in a Bottle, but triple jump! Not stackable.",
   "tooltip.reliquary.dunerider_talisman": "§e§oDesert Stride!§7§f Increaes movement speed in desert terrain.",
   "tooltip.reliquary.berserker_vial": "Adrenaline §c§lRush!§7§f Increased strength when low.",
-  "tooltip.reliquary.berserker_brew": "Adrenaline §c§o§lFrenzy!§7§f Even more strength when low."
+  "tooltip.reliquary.berserker_brew": "Adrenaline §c§o§lFrenzy!§7§f Even more strength when low.",
+
+  "creativetab.reliquary.relics": "Reliquary's Relics"
 }

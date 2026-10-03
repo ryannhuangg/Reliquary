@@ -1,14 +1,13 @@
 package com.eboysaber.reliquary;
 
 import com.eboysaber.reliquary.item.ModItems;
+import com.eboysaber.reliquary.item.ModCreativeModeTabs;
 import com.mojang.logging.LogUtils;
-import net.minecraft.world.item.CreativeModeTabs;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
 import org.slf4j.Logger;
@@ -24,22 +23,14 @@ public class ReliquaryMod {
         ModItems.register(modEventBus);
 
         NeoForge.EVENT_BUS.register(this);
-        modEventBus.addListener(this::addCreative);
+
+        ModCreativeModeTabs.register(modEventBus);
     }
 
     private void commonSetup(FMLCommonSetupEvent event) {
         LOGGER.info("HELLO FROM COMMON SETUP");
     }
 
-    private void addCreative(BuildCreativeModeTabContentsEvent event) {
-        if(event.getTabKey() == CreativeModeTabs.COMBAT) {
-            event.accept(ModItems.CLOUD_IN_A_BOTTLE);
-            event.accept(ModItems.STORM_IN_A_BOTTLE);
-            event.accept(ModItems.DUNERIDER_TALISMAN);
-            event.accept(ModItems.BERSERKER_VIAL);
-            event.accept(ModItems.BERSERKER_BREW);
-        }
-    }
 
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event) {
