@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "reliquary:item/berserker_brew"
+    "layer0": "reliquary:item/effigy_of_condemned"
   }
 }

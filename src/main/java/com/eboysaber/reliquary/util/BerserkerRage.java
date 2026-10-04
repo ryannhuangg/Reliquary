@@ -17,7 +17,7 @@ public final class BerserkerRage {
     }
 
     @SubscribeEvent
-    public static void onPlayerTicket(PlayerTickEvent.Post event) {
+    public static void onPlayerTick(PlayerTickEvent.Post event) {
         Player player = event.getEntity();
         if (player.level().isClientSide()) {
             return;

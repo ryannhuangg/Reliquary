@@ -3,15 +3,18 @@
   "item.reliquary.storm_in_a_bottle": "Storm in a Bottle",
   "item.reliquary.dunerider_talisman": "Dunerider's Talisman",
   "item.reliquary.berserker_vial": "Berserker's Vial",
-  "item.reliquary.berserker_brew": "Berserker's Brew",
-  "item.reliquary.berserker_chalice": "Berserker's Chalice",
+  "item.reliquary.berserker_brew": "\u00A75Berserker's Brew",
+  "item.reliquary.berserker_chalice": "\u00A76Berserker's Chalice",
+  "item.reliquary.effigy_of_condemned": "Effigy of the Condemned",
 
-  "tooltip.reliquary.cloud_in_a_bottle": "Feel §b§oweightless!§7§f Negates fall damage and allows double jump. Stackable.",
-  "tooltip.reliquary.storm_in_a_bottle": "Harness the §e§lweather!§r§f Cloud in a Bottle, but triple jump! Not stackable.",
-  "tooltip.reliquary.dunerider_talisman": "§e§oDesert Stride!§7§f Increaes movement speed in desert terrain.",
-  "tooltip.reliquary.berserker_vial": "Adrenaline §c§lRush!§7§f Increased strength when low.",
-  "tooltip.reliquary.berserker_brew": "Adrenaline §c§o§lFrenzy!§7§f Even more strength when low.",
-  "tooltip.reliquary.berserker_chalice": "§4§oBloodlust.",
+  "tooltip.reliquary.cloud_in_a_bottle": "Feel \u00A7b\u00A7oweightless!\u00A7f Negates fall damage and allows double jump. Stackable.",
+  "tooltip.reliquary.storm_in_a_bottle": "Harness the \u00A7e\u00A7lweather!\u00A7f Cloud in a Bottle, but triple jump! Not stackable.",
+  "tooltip.reliquary.dunerider_talisman": "\u00A7e\u00A7oDesert Stride!\u00A7f Increases movement speed in desert terrain.",
+  "tooltip.reliquary.berserker_vial": "Adrenaline \u00A7c\u00A7lRush!\u00A7f Increased strength when low.",
+  "tooltip.reliquary.berserker_brew": "Adrenaline \u00A7c\u00A7l\u00A7oFrenzy!\u00A7f Even more strength when low.",
+  "tooltip.reliquary.berserker_chalice": "\u00A74\u00A7oBloodlust.",
+  "tooltip.reliquary.effigy_of_condemned": "\u00A74\u00A7l\u00A7kXXX \u00A74\u00A7lKill or be killed. \u00A74\u00A7l\u00A7kXXX",
 
-  "creativetab.reliquary.relics": "Reliquary's Relics"
+  "creativetab.reliquary.relics": "Reliquary's Relics",
+  "creativetab.reliquary.amulets": "Reliquary's Amulets"
 }
