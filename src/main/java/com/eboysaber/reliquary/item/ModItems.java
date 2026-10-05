@@ -13,19 +13,19 @@ public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(ReliquaryMod.MODID);
 
 
-    public static DeferredItem<Item> registerAccessory(String name, Rarity rarity) {
+    public static DeferredItem<Item> registerAccessory(String name) {
         return ITEMS.register(name,
                 () -> new AccessoryItem(
-                        new Item.Properties().stacksTo(1).rarity(rarity), "tooltip." + ReliquaryMod.MODID + "." + name));
+                        new Item.Properties().stacksTo(1), "tooltip." + ReliquaryMod.MODID + "." + name));
     }
 
-    public static final DeferredItem<Item> CLOUD_IN_A_BOTTLE = registerAccessory("cloud_in_a_bottle", Rarity.UNCOMMON);
-    public static final DeferredItem<Item> STORM_IN_A_BOTTLE = registerAccessory("storm_in_a_bottle", Rarity.RARE);
-    public static final DeferredItem<Item> DUNERIDER_TALISMAN = registerAccessory("dunerider_talisman", Rarity.UNCOMMON);
-    public static final DeferredItem<Item> BERSERKER_VIAL = registerAccessory("berserker_vial", Rarity.RARE);
-    public static final DeferredItem<Item> BERSERKER_BREW = registerAccessory("berserker_brew", Rarity.COMMON); // EPIC
-    public static final DeferredItem<Item> BERSERKER_CHALICE = registerAccessory("berserker_chalice", Rarity.COMMON); //LEGENDARY
-    public static final DeferredItem<Item> EFFIGY_OF_CONDEMNED = registerAccessory("effigy_of_condemned", Rarity.EPIC); //MYTHIC
+    public static final DeferredItem<Item> CLOUD_IN_A_BOTTLE = registerAccessory("cloud_in_a_bottle"); // UNCOMMON
+    public static final DeferredItem<Item> STORM_IN_A_BOTTLE = registerAccessory("storm_in_a_bottle"); // EPIC
+    public static final DeferredItem<Item> DUNERIDER_TALISMAN = registerAccessory("dunerider_talisman"); //UNCOMMON
+    public static final DeferredItem<Item> BERSERKER_VIAL = registerAccessory("berserker_vial"); // RARE
+    public static final DeferredItem<Item> BERSERKER_BREW = registerAccessory("berserker_brew"); // EPIC
+    public static final DeferredItem<Item> BERSERKER_CHALICE = registerAccessory("berserker_chalice"); // LEGENDARY
+    public static final DeferredItem<Item> EFFIGY_OF_CONDEMNED = registerAccessory("effigy_of_condemned"); //MYTHIC
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
