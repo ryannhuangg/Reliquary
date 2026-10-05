@@ -1,6 +1,8 @@
 {
   "replace": false,
   "values": [
-    "reliquary:example_emblem"
+    "reliquary:berserker_vial",
+    "reliquary:berserker_brew",
+    "reliquary:berserker_chalice"
   ]
 }

@@ -3,9 +3,6 @@
   "values": [
     "reliquary:cloud_in_a_bottle",
     "reliquary:storm_in_a_bottle",
-    "reliquary:dunerider_talisman",
-    "reliquary:berserker_vial",
-    "reliquary:berserker_brew",
-    "reliquary:berserker_chalice"
+    "reliquary:dunerider_talisman"
   ]
 }
