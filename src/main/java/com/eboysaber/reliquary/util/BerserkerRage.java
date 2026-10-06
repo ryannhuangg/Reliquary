@@ -19,9 +19,7 @@ public final class BerserkerRage {
     @SubscribeEvent
     public static void onPlayerTick(PlayerTickEvent.Post event) {
         Player player = event.getEntity();
-        if (player.level().isClientSide()) {
-            return;
-        }
+        if (player.level().isClientSide()) return;
 
         boolean hasVial = CuriosUtil.isEquipped(player, ModItems.BERSERKER_VIAL.get());
         boolean hasBrew = CuriosUtil.isEquipped(player, ModItems.BERSERKER_BREW.get());
@@ -30,13 +28,13 @@ public final class BerserkerRage {
 
         if (player.getHealth() < 8.0f) {
             if (player.getHealth() < 6.0f && hasChalice) {
-                player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 20, 2, true, false, true));
+                player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 19, 2, true, false, true));
             }
             else if (hasBrew) {
-                player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 20, 1, true, false, true));
+                player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 19, 1, true, false, true));
             }
              else if (hasVial) {
-                player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 20, 0, true, false, true));
+                player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 19, 0, true, false, true));
             }
         }
     }

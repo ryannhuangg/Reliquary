@@ -24,6 +24,8 @@ public class ModItems {
     public static final DeferredItem<Item> BERSERKER_BREW = registerAccessory("berserker_brew"); // EPIC
     public static final DeferredItem<Item> BERSERKER_CHALICE = registerAccessory("berserker_chalice"); // LEGENDARY
     public static final DeferredItem<Item> EFFIGY_OF_CONDEMNED = registerAccessory("effigy_of_condemned"); //DIVINE
+    public static final DeferredItem<Item> VANGUARD_BRACE = registerAccessory("vanguard_brace"); // EPIC
+    public static final DeferredItem<Item> VANGUARD_SHIELD = registerAccessory("vanguard_shield"); // LEGENDARY
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
